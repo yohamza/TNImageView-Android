@@ -39,6 +39,9 @@ TNImageView tnImage = new TNImageView():
 
 // pass your ImageView which you want to make rotatable and scaleable
 tnImage.makeRotatableScalable(imageview);
+
+//you can also select if the touched view comes to front or not
+tnImage.bringToFrontOnTouch(true);
 ```
 
 # Remember
