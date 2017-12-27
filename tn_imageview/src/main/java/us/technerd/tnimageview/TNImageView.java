@@ -14,6 +14,7 @@ import android.widget.RelativeLayout;
 
 import java.io.IOException;
 import java.net.URI;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -30,6 +31,7 @@ public class TNImageView {
     private float oldDist = 1f;
     private float d = 0f;
     private float newRot = 0f;
+    private List<ImageView> imageList = new ArrayList<>();
 
 
     public ImageView makeRotatableScalable(ImageView imageView){
@@ -45,6 +47,16 @@ public class TNImageView {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
                 final ImageView view = (ImageView) v;
+
+                if(!imageList.isEmpty()) {
+                    for (ImageView i : imageList) {
+
+                        if (i == view) {
+                            view.bringToFront();
+                            view.getRootView().invalidate();
+                        }
+                    }
+                }
 
                 ((BitmapDrawable) view.getDrawable()).setAntiAlias(true);
                 switch (event.getAction() & MotionEvent.ACTION_MASK) {
@@ -178,6 +190,7 @@ public class TNImageView {
             layoutParams.bottomMargin = 250 - 500;
             layoutParams.rightMargin = 250 - 500;
             image.setLayoutParams(layoutParams);
+            imageList.add(image);
             makeRotatableScalable(image);
             relativeLayout.addView(image, layoutParams);
         }
@@ -195,6 +208,7 @@ public class TNImageView {
             layoutParams.bottomMargin = 250 - 500;
             layoutParams.rightMargin = 250 - 500;
             image.setLayoutParams(layoutParams);
+            imageList.add(image);
             makeRotatableScalable(image);
             relativeLayout.addView(image, layoutParams);
         }
