@@ -26,7 +26,7 @@ For a working implementation of this project see the `app/` folder.
 2. Include the following dependency.
 
 ```
-compile 'com.github.AmeerHamzaaa:TNImageView-Android:0.1.1'
+compile 'com.github.AmeerHamzaaa:TNImageView-Android:0.1.2'
 ```
 
 # Usage
