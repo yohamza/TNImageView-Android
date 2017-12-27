@@ -23,7 +23,7 @@ import java.util.List;
 
 public class TNImageView {
 
-    float scalediff;
+    private float scalediff;
     private static final int NONE = 0;
     private static final int DRAG = 1;
     private static final int ZOOM = 2;
@@ -31,6 +31,8 @@ public class TNImageView {
     private float oldDist = 1f;
     private float d = 0f;
     private float newRot = 0f;
+
+    private boolean bringToFrontOnTouch = false;
     private List<ImageView> imageList = new ArrayList<>();
 
 
@@ -48,15 +50,18 @@ public class TNImageView {
             public boolean onTouch(View v, MotionEvent event) {
                 final ImageView view = (ImageView) v;
 
-                if(!imageList.isEmpty()) {
-                    for (ImageView i : imageList) {
+                if(bringToFrontOnTouch=true){
+                    if(!imageList.isEmpty()) {
+                        for (ImageView i : imageList) {
 
-                        if (i == view) {
-                            view.bringToFront();
-                            view.getRootView().invalidate();
+                            if (i == view) {
+                                view.bringToFront();
+                                view.getRootView().invalidate();
+                            }
                         }
                     }
                 }
+
 
                 ((BitmapDrawable) view.getDrawable()).setAntiAlias(true);
                 switch (event.getAction() & MotionEvent.ACTION_MASK) {
@@ -170,49 +175,15 @@ public class TNImageView {
         return (float) Math.toDegrees(radians);
     }
 
-    public void addTNImageViewsWithUri(Context context, List<Uri> uriList, RelativeLayout relativeLayout) {
-
-        for (int i = 0; i < uriList.size(); i++) {
-
-            final Uri imageUri = uriList.get(i);
-
-            Bitmap bitmap = null;
-            try {
-                bitmap = MediaStore.Images.Media.getBitmap(context.getContentResolver(), imageUri);
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-            ImageView image = new ImageView(context);
-
-            RelativeLayout.LayoutParams layoutParams = new RelativeLayout.LayoutParams(bitmap.getWidth(), bitmap.getHeight());
-            layoutParams.leftMargin = 150 + 200 * i;
-            layoutParams.topMargin = 200;
-            layoutParams.bottomMargin = 250 - 500;
-            layoutParams.rightMargin = 250 - 500;
-            image.setLayoutParams(layoutParams);
-            imageList.add(image);
-            makeRotatableScalable(image);
-            relativeLayout.addView(image, layoutParams);
+    public void addListofImageViews(List<ImageView> imageViewList){
+        for(int i =0;i<imageViewList.size();i++){
+            makeRotatableScalable(imageViewList.get(i));
         }
+        this.imageList = imageViewList;
     }
 
-    public void addTNImageViewsWithBitmap(Context context, List<Bitmap> bitmapList, RelativeLayout relativeLayout){
-
-        for(int i=0;i<bitmapList.size();i++){
-
-            ImageView image = new ImageView(context);
-
-            RelativeLayout.LayoutParams layoutParams = new RelativeLayout.LayoutParams(bitmapList.get(i).getWidth(), bitmapList.get(i).getHeight());
-            layoutParams.leftMargin = 150 + 200 * i;
-            layoutParams.topMargin = 200;
-            layoutParams.bottomMargin = 250 - 500;
-            layoutParams.rightMargin = 250 - 500;
-            image.setLayoutParams(layoutParams);
-            imageList.add(image);
-            makeRotatableScalable(image);
-            relativeLayout.addView(image, layoutParams);
-        }
-
+    public void bringToFrontOnTouch(boolean bringToFront) {
+        this.bringToFrontOnTouch = bringToFront;
     }
 
 
