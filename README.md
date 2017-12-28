@@ -2,8 +2,7 @@
 Android Library for making scale-able and rotatable image views or giving this power to your own image view
 
 
-
-
+![Independent they are :p](https://media.giphy.com/media/3oFzmelzRf8Cou0BJC/giphy.gif) ------
 ![Independent they are :p](https://media.giphy.com/media/l1IBijSn8Fz1XzAUE/giphy.gif)
 
 # Installing
