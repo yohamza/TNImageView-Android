@@ -1,4 +1,6 @@
 # TNImageView-Android
+[![Release](https://jitpack.io/v/AmeerHamzaaa/TNImageView-Android.svg)](https://jitpack.io/#AmeerHamzaaa/TNImageView-Android/0.1.2)    [![Android Arsenal]( https://img.shields.io/badge/Android%20Arsenal-TNImageView-green.svg?style=flat )]( https://android-arsenal.com/details/1/6607 )
+
 Android Library for making scale-able and rotatable image views or giving this power to your own image view
 
 
