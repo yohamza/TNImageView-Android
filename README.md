@@ -64,7 +64,11 @@ Please open an issue if you find things, that are missing.
 
 # Developed By
 
- * Ameer Hamza - [StackOverFlow](https://stackoverflow.com/story/ameer_hamza)   mailto - <aha1475@gmail.com>
+ * Ameer Hamza
+ 
+ * [StackOverFlow](https://stackoverflow.com/story/ameer_hamza)
+ * [Facebook](https://www.facebook.com/hamzabhatti20)
+ * mailto - <aha1475@gmail.com>
 
 # Contributions
 
