@@ -62,6 +62,13 @@ tnImage.addListofImageViews(imageViews);
 
 Please open an issue if you find things, that are missing.
 
+
+
+If you think this library is useful, please press star button at upside. 
+<br/>
+<img src="https://phaser.io/content/news/2015/09/10000-stars.png" width="200">
+<br/><br/>
+
 # Developed By
 
  * Ameer Hamza
