@@ -1,3 +1,4 @@
+#This Repo is not maintained any more.
 # TNImageView-Android    [![Release](https://jitpack.io/v/AmeerHamzaaa/TNImageView-Android.svg)](https://jitpack.io/#AmeerHamzaaa/TNImageView-Android/0.1.2)    [![Android Arsenal]( https://img.shields.io/badge/Android%20Arsenal-TNImageView-green.svg?style=flat )]( https://android-arsenal.com/details/1/6607 )
 
 <img src="Logotype primary.png" width="70%" height="70%" />
