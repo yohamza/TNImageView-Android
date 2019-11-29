@@ -1,7 +1,8 @@
-#This Repo is not maintained any more.
 # TNImageView-Android    [![Release](https://jitpack.io/v/AmeerHamzaaa/TNImageView-Android.svg)](https://jitpack.io/#AmeerHamzaaa/TNImageView-Android/0.1.2)    [![Android Arsenal]( https://img.shields.io/badge/Android%20Arsenal-TNImageView-green.svg?style=flat )]( https://android-arsenal.com/details/1/6607 )
 
 <img src="Logotype primary.png" width="70%" height="70%" />
+
+<h1>This Repo is not maintained any more.</h1>
 
 Android Library for making scale-able and rotatable image views or giving this power to your own image view
 
